@@ -6,3 +6,73 @@ html, body { scroll-behavior: smooth; }
 .gradient { background: radial-gradient(60% 60% at 50% 40%, #eef2ff 0%, transparent 60%), linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
 .container { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
 .card { border-radius: 1.5rem; border: 1px solid #e2e8f0; background: white; box-shadow: 0 8px 30px rgba(2,8,23,0.08); }
+
+/* Gradient brand text */
+.text-gradient {
+  background: linear-gradient(90deg, #a78bfa 0%, #22d3ee 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hero card shell */
+.card\/hero {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem 1rem; border-radius: 9999px;
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  color: white; font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 30px rgba(124,58,237,0.25);
+}
+.btn-primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0px); }
+
+.btn-ghost {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem 1rem; border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color: white; font-weight: 600;
+  backdrop-filter: blur(6px);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.12); }
+
+/* Soft glow ring behind the portrait card */
+.glow-ring {
+  position: absolute; inset: -14% -10% auto -10%; height: 70%;
+  background: radial-gradient(40% 30% at 50% 50%, rgba(124,58,237,0.45), transparent 60%);
+  filter: blur(32px);
+  z-index: -1;
+}
+
+
+/* Brand accent gradient */
+.text-brand-accent {
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes pulseZoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+.animate-pulse-slow {
+  animation: pulseZoom 6s ease-in-out infinite;
+}
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(25deg);
+  }
+}

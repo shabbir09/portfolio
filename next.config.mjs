@@ -1,14 +1,11 @@
 /** @type {import("next").NextConfig} */
-import path, { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import path from "path";
 
 const nextConfig = {
   images: { unoptimized: true },
   webpack: (config) => {
-    // Path alias for "@/..."
-    config.resolve.alias["@"] = path.resolve(__dirname);
+    // Map "@/..." to project root
+    config.resolve.alias["@"] = path.resolve(".");
     return config;
   }
 };
